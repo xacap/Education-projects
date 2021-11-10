@@ -8,8 +8,6 @@ public class BehaviorBox00 : MonoBehaviour
 
     public GameBehavior gameManager;
 
-    
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Bullet")
@@ -32,6 +30,8 @@ public class BehaviorBox00 : MonoBehaviour
  
     public void State()
     {
+        AudioSource audio = GetComponent<AudioSource>();
+
         if (healthBox == 3)
         {
             GetComponent<SpriteRenderer>().color = Color.red;
@@ -49,14 +49,9 @@ public class BehaviorBox00 : MonoBehaviour
 
         else if (healthBox == 0)
         {
-
             gameManager.CoundDestroyBlock += 1;
             Destroy(gameObject);
             gameManager.Score += 10;
-
-            
-
-
         }
     }
 

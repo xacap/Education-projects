@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class createPrefab : MonoBehaviour
+public class createPrefabLevelII : MonoBehaviour
 {
     public GameObject block;
     public float startPosX;
@@ -11,21 +11,19 @@ public class createPrefab : MonoBehaviour
     public float outY;
     private GameObject[,] grid;
 
-
     void Start()
     {
 
-        grid = new GameObject[3, 10];
+        grid = new GameObject[10, 10];
 
-		for (int x = 0; x < 3; x++)
-		{
+        for (int x = 0; x < 10; x++)
+        {
             for (int y = 0; y < 10; y++)
-			{
+            {
                 grid[x, y] = RegisterIcon(new CCell(x, y));
             }
-		}
-	}
-           
+        }
+    }
     private GameObject RegisterIcon(CCell pos)
     {
         GameObject gameObject = Instantiate(block) as GameObject;
@@ -54,4 +52,3 @@ public class createPrefab : MonoBehaviour
         }
     }
 }
-
