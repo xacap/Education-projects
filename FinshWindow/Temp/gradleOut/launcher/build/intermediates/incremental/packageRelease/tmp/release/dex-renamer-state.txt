@@ -1,0 +1,4 @@
+#Thu Dec 16 16:58:27 EET 2021
+base.0=E\:\\_simpleProjects\\FinshWindow\\Temp\\gradleOut\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
